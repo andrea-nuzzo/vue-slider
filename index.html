@@ -25,7 +25,7 @@
                 
     
                 <div class="imgSequence">
-                    <div class="boxList opacityon" v-for = "(postcard, index) in postcards">
+                    <div class="boxList" v-for = "(postcard, index) in postcards" :class="index == currentImg ? '' : 'opacityon'" @click="selectImg(index)" >
                         <img :src="postcard.image" alt="">
                     </div>
 
