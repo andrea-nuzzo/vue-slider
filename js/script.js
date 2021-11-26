@@ -27,7 +27,7 @@ const app = new Vue({
             },
             {
                 country:'Paradise',
-                contrySubheading:'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                contrySubheading:'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
                 image:'img/05.jpg',
             },
         ],
@@ -40,6 +40,7 @@ const app = new Vue({
 
     }
 });
+
 
 
 // //Popolare la sezione con la sequenza di immagini
