@@ -4,7 +4,7 @@ const app = new Vue({
 
     // ***** DATA *****
     data:{
-        postcard: [
+        postcards: [
             {
                 country:'Svezia',
                 contrySubheading:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
@@ -32,11 +32,15 @@ const app = new Vue({
             },
         ],
 
+        currentImg: 0
+
     },
 
 
     // ***** METHODS *****
     methods:{
+
+
 
     }
 });

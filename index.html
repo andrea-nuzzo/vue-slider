@@ -14,31 +14,21 @@
             <div class="slider">
                 <div class="imgWithText">
                     <div class="box active">
-                        <img src="img/01.jpg" alt="">
+                        <img :src="postcards[currentImg].image" alt="">
+
                         <div class="country">
-                            <div class="nameCountry active">Svezia</div>
-                            <div class="description active">Lorem ipsum</div>
+                            <div class="nameCountry active">{{postcards[currentImg].country}}</div>
+                            <div class="description active">{{postcards[currentImg].contrySubheading}}</div>
                         </div>
                     </div>
                 </div>
                 
     
                 <div class="imgSequence">
-                    <div class="boxList opacityon">
-                        <img src="img/01.jpg" alt="">
+                    <div class="boxList opacityon" v-for= "postcard in postcards ">
+                        <img :src="postcard.image" alt="">
                     </div>
-                    <div class="boxList opacityon">
-                        <img src="img/02.jpg" alt="">
-                    </div>
-                    <div class="boxList opacityon">
-                        <img src="img/03.jpg" alt="">
-                    </div>
-                    <div class="boxList opacityon">
-                        <img src="img/04.jpg" alt="">
-                    </div>
-                    <div class="boxList opacityon">
-                        <img src="img/05.jpg" alt="">
-                    </div>
+
                     <div class="arrowUp"><i class="fas fa-chevron-up"></i></div>
                     <div class="arrowDown"><i class="fas fa-chevron-down"></i></div>
                 </div>
