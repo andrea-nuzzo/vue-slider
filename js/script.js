@@ -38,13 +38,20 @@ const app = new Vue({
 
     // ***** METHODS *****
     methods:{
-
         upImage: function(){
-            this.currentImg--;
+            if (this.currentImg == 0) {
+                this.currentImg = this.postcards.length - 1;
+            }else{
+                this.currentImg--;
+            }
         },
 
         downImage: function(){
-            this.currentImg++;
+            if (this.currentImg == this.postcards.length - 1) {
+                this.currentImg = 0;
+            }else{
+                this.currentImg++;
+            }
         }
 
 
