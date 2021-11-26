@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    position: relative;
+}
+
+.slider{
+    width: 70vw;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.country{
+    width: 80%;
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    padding: 10px;
+}
+.nameCountry{
+    display: none;
+    text-align: right;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.description{
+    display: none;
+    font-size: 12px;
+    text-align: right;
+}
+
+.imgWithText{
+    width: 80vw;
+    height: 100%;
+}
+
+.imgSequence{
+    width: 20vw;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.boxList{
+    width: 100%;
+    height: calc(100% / 5);
+    border: solid 1px lightgray;
+    background-color: black;
+}
+
+.opacityon img{
+    opacity: .4;
+}
+
+.box{
+    height: 100%;
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.boxList img, .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.arrowUp, .arrowDown{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: lightgray;
+    padding: 15px;
+    z-index: 999;
+}
+
+.arrowUp{
+    top: 10px;
+}
+
+.arrowDown{
+    bottom: 10px;
+}
+
+.arrowUp i, .arrowDown i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
