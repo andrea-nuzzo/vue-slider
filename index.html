@@ -11,7 +11,7 @@
 <body class="debug">
     <div id="root">
         <div class="container">
-            <div class="slider" @mouseover="stopLoop"  @mouseleave="stop">
+            <div class="slider" @mouseleave="autoPlay" @mouseover = "stop">
                 <div class="imgWithText">
                     <div class="box active">
                         <img :src="postcards[currentImg].image" alt="">
@@ -23,7 +23,6 @@
                     </div>
                 </div>
                 
-    
                 <div class="imgSequence">
                     <div class="boxList" v-for = "(postcard, index) in postcards" :class="index == currentImg ? '' : 'opacityon'" @click="selectImg(index)" >
                         <img :src="postcard.image" alt="">

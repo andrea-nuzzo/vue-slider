@@ -33,6 +33,7 @@ const app = new Vue({
         ],
 
         currentImg: 0,
+        timer: 0,
     },
 
     // ***** METHODS *****
@@ -57,15 +58,16 @@ const app = new Vue({
 			this.currentImg = index;
 		},
 
+        autoPlay: function(){
+            this.timer = setInterval(this.downImage, 3000)
+        },
 
         stop: function(){
-            setInterval(app.downImage(), 3000)
-        },
-
-        stopLoop: function(){
-            clearInterval(app.stop());
-        },
-
-        
+            clearInterval(this.timer)
+        }
     },
+    
+    created: function() {
+        this.autoPlay();
+      }
 });
