@@ -32,8 +32,8 @@ const app = new Vue({
             },
         ],
 
-        currentImg: 0
-
+        currentImg: 0,
+        timer: 0
     },
 
     // ***** METHODS *****
@@ -53,11 +53,20 @@ const app = new Vue({
                 this.currentImg++;
             }
         },
+
         selectImg: function(index) {
 			this.currentImg = index;
-		}
+		},
 
+        play: function() {
+            let app = this;
+            this.timer = setInterval(function() {
+                app.downImage();
+            }, 3000);
+        }
+    },
 
-
+    created: function() {
+        this.play();
     }
 });
